@@ -1,0 +1,5 @@
+@MappingRole: true
+define role ZC_EventTableRap {
+  grant select on ZC_EventTableRap
+  where INHERITING CONDITIONS FROM ENTITY ZI_EventTableRap;
+}

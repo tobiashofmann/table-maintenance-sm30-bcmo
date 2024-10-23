@@ -1,0 +1,4 @@
+define service ZUI_EVENTTABLERAP {
+  expose ZC_EVENTTABLERAP_S as EventTableRapAll;
+  expose ZC_EVENTTABLERAP as EventTableRap;
+}

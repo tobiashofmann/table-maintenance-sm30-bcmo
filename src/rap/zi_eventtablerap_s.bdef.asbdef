@@ -1,0 +1,73 @@
+managed with additional save implementation in class ZBP_I_EVENTTABLERAP_S unique;
+strict;
+with draft;
+
+define behavior for ZI_EventTableRap_S alias EventTableRapAll
+draft table ZRAP_EVENT_D_S
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master( global )
+
+{
+  field ( readonly )
+   SingletonID;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+  action ( features : instance ) SelectCustomizingTransptReq parameter D_SelectCustomizingTransptReqP result [1] $self;
+
+  association _EventTableRap { create ( features : instance ); with draft; }
+}
+
+define behavior for ZI_EventTableRap alias EventTableRap
+persistent table ZRAP_EVENT
+draft table ZRAP_EVENT_D
+etag master LocalLastChangedAt
+lock dependent by _EventTableRapAll
+authorization dependent by _EventTableRapAll
+
+{
+  field ( readonly )
+   SingletonID,
+   Locationid,
+   LocalCreatedBy,
+   LocalCreatedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   LastChangedAt;
+
+  field ( numbering : managed )
+   Locationid;
+
+
+  update( features : global );
+  delete( features : global );
+
+  mapping for ZRAP_EVENT
+  {
+    Locationid = LOCATIONID;
+    Title = TITLE;
+    Description = DESCRIPTION;
+    Capacity = CAPACITY;
+    Location = LOCATION;
+    BeginDate = BEGIN_DATE;
+    EndDate = END_DATE;
+    LocalCreatedBy = LOCAL_CREATED_BY;
+    LocalCreatedAt = LOCAL_CREATED_AT;
+    LocalLastChangedBy = LOCAL_LAST_CHANGED_BY;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+    LastChangedAt = LAST_CHANGED_AT;
+  }
+
+  association _EventTableRapAll { with draft; }
+
+  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT { create; update; delete; }
+}

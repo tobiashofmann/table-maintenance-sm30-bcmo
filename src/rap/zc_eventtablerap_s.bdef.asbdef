@@ -1,0 +1,25 @@
+projection;
+strict;
+use draft;
+
+define behavior for ZC_EventTableRap_S alias EventTableRapAll
+
+{
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+  use action SelectCustomizingTransptReq;
+
+  use association _EventTableRap { create; with draft; }
+}
+
+define behavior for ZC_EventTableRap alias EventTableRap
+
+{
+  use update;
+  use delete;
+
+  use association _EventTableRapAll { with draft; }
+}

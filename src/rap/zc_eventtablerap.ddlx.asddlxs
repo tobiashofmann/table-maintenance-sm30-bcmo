@@ -1,0 +1,92 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'EventTableRap', 
+    typeNamePlural: 'EventTableRaps', 
+    title: {
+      type: #STANDARD, 
+      label: 'Event table RAP', 
+      value: 'Locationid'
+    }
+  }
+}
+annotate view ZC_EventTableRap with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_EventTableRap', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Event table RAP', 
+    position: 1 
+  } ]
+  Locationid;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  @UI.lineItem: [ {
+    position: 2 
+  } ]
+  Title;
+  
+  @UI.identification: [ {
+    position: 3 
+  } ]
+  @UI.lineItem: [ {
+    position: 3 
+  } ]
+  Description;
+  
+  @UI.identification: [ {
+    position: 4 
+  } ]
+  @UI.lineItem: [ {
+    position: 4 
+  } ]
+  Capacity;
+  
+  @UI.identification: [ {
+    position: 5 
+  } ]
+  @UI.lineItem: [ {
+    position: 5 
+  } ]
+  Location;
+  
+  @UI.identification: [ {
+    position: 6 
+  } ]
+  @UI.lineItem: [ {
+    position: 6 
+  } ]
+  BeginDate;
+  
+  @UI.identification: [ {
+    position: 7 
+  } ]
+  @UI.lineItem: [ {
+    position: 7 
+  } ]
+  EndDate;
+  
+  @UI.identification: [ {
+    position: 8 
+  } ]
+  LocalCreatedBy;
+  
+  @UI.identification: [ {
+    position: 9 
+  } ]
+  LocalCreatedAt;
+  
+  @UI.identification: [ {
+    position: 10 
+  } ]
+  LastChangedAt;
+}
