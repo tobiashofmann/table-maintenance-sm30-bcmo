@@ -16,11 +16,11 @@ The sample uses the package $EVENT and two sub packages $SM30 and $RAP. Coding f
 
 ### Table
 
-The starting point of the blog post is the table and base types. There are in tag [1-sm30-table](tree/1-sm30-table).
+The starting point of the blog post is the table and base types. There are in tag [1-sm30-table](https://github.com/tobiashofmann/table-maintenance-sm30-bcmo/releases/tag/1-sm30-table).
 
 ### Table Maintenance Dialog
 
-The table maintenance dialog for the table ZSM30_EVENT is created in tag [2-table-maintenance-view](tree/2-table-maintenance-view). The function group ZSM30_FUGR_LOC is created and the table maintenance can be started in SM30.
+The table maintenance dialog for the table ZSM30_EVENT is created in tag [2-table-maintenance-view](https://github.com/tobiashofmann/table-maintenance-sm30-bcmo/releases/tag/2-table-maintenance-view). The function group ZSM30_FUGR_LOC is created and the table maintenance can be started in SM30.
 
 ### RAP sample database table
 
@@ -28,11 +28,11 @@ The RAP object for the table is created. A new table is created to make use of R
 
 ![ZRAP EVENT table](img/ZRAP_EVENT_table.png) 
 
-The status of the project with the new event table is available in tag [3-rap-table-event](tree/3-rap-table-event).
+The status of the project with the new event table is available in tag [3-rap-table-event](https://github.com/tobiashofmann/table-maintenance-sm30-bcmo/releases/tag/3-rap-table-event).
 
 ### Business Configuration Maintenance Object
 
-The ADT wizard is used to create the Business Configuration Maintenance Object based on the table ZRAP_EVENT. The created RAP objects can be found in tag [4-bcmo-adt-wizard](tree/4-bcmo-adt-wizard).
+The ADT wizard is used to create the Business Configuration Maintenance Object based on the table ZRAP_EVENT. The created RAP objects can be found in tag [4-bcmo-adt-wizard](https://github.com/tobiashofmann/table-maintenance-sm30-bcmo/releases/tag/4-bcmo-adt-wizard).
 
 ### Business Configuration Maintenance App
 
