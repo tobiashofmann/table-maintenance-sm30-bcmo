@@ -37,3 +37,5 @@ The ADT wizard is used to create the Business Configuration Maintenance Object b
 ### Business Configuration Maintenance App
 
 The app is not part of this repository. Refer the blog post the see how to use the app to maintain data for table ZRAP_EVENT using the previously generated Business Configuration Maintenance Object.
+
+The Excel file with the sample data used in the blog post for the copy&paste demo is also in this repository: [EventTableRaps.xlsx](https://github.com/tobiashofmann/table-maintenance-sm30-bcmo/raw/refs/heads/main/EventTableRaps.xlsx).
